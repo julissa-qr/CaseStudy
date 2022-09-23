@@ -1,0 +1,27 @@
+<p style="margin:0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">
+                                            <br><a href="http://www.example.com" style="color:#ee4c50;text-decoration:underline;"> Take a look at created orders</a>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding:30px;background:#ee4c50;">
+                            <table role="presentation" style="width:100%;border-collapse:collapse;border:0;border-spacing:0;font-size:9px;font-family:Arial,sans-serif;">
+                                <tr>
+                                    <td style="padding:0;width:50%;" align="left">
+                                        <p style="margin:0;font-size:14px;line-height:16px;font-family:Arial,sans-serif;color:#ffffff;">
+                                            &reg; Hexaware online shop<br /><a href="https://hexaware.com" style="color:#ffffff;text-decoration:underline;">Go to our webpage</a>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
