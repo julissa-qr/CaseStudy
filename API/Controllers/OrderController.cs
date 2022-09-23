@@ -15,6 +15,9 @@ using MailKit.Net.Smtp;
 using MailKit.Security;
 using MimeKit.Text;
 using API.Services.EmailService;
+using MailKit;
+using System.IO;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace API.Controllers
 {
@@ -103,21 +106,28 @@ namespace API.Controllers
             _context.Orders.Add(order);
            // _emailService.SendEmail(request);
            
+            var bodyBuilder = new BodyBuilder();
+
+            using (StreamReader SourceReader = System.IO.File.OpenText("C:/julissa/JStore/API/Controllers/email1.html"))
+            {
+                bodyBuilder.HtmlBody = SourceReader.ReadToEnd();
+            }
+
             
-            /*var email = new MimeMessage();
+            var email = new MimeMessage();
             email.From.Add(MailboxAddress.Parse("christa.kessler16@ethereal.email"));
-            email.To.Add(MailboxAddress.Parse("christa.kessler16@ethereal.email"));
+            email.To.Add(MailboxAddress.Parse("wellington.kuhic23@ethereal.email"));
             email.Subject= "Order created!!";
-            email.Body = new TextPart(TextFormat.Html) {Text = "Your order was created!"};
+            
+            email.Body = bodyBuilder.ToMessageBody();
 
             using var smtp = new MailKit.Net.Smtp.SmtpClient();
             smtp.Connect("smtp.ethereal.email", 587, SecureSocketOptions.StartTls); //smtp.gmail.com
-            smtp.Authenticate("christa.kessler16@ethereal.email", "RC4D37EyGBxEKHKuvd");
+            smtp.Authenticate("wellington.kuhic23@ethereal.email", "UeexD2WCNS8FCcduAN");
             smtp.Send(email);
-            smtp.Disconnect(true);*/
-
+            smtp.Disconnect(true);
             
-
+        
             _context.Baskets.Remove(basket);
 
         
