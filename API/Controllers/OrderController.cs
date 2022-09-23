@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Mail;
@@ -11,6 +10,11 @@ using API.Extensions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using MimeKit;
+using MailKit.Net.Smtp;
+using MailKit.Security;
+using MimeKit.Text;
+using API.Services.EmailService;
 
 namespace API.Controllers
 {
@@ -23,6 +27,14 @@ namespace API.Controllers
             _context = context;
 
         }
+
+        private readonly IEmailService _emailService;
+
+       /*public OrderController(IEmailService emailService)
+        {
+            _emailService = emailService;
+            
+        }*/
 
         [HttpGet]
         public async Task<ActionResult<List<OrderDto>>> GetOrders()
@@ -43,6 +55,7 @@ namespace API.Controllers
         }
 
         [HttpPost]
+        
         public async Task<ActionResult<int>> CreateOrder(CreateOrderDto orderDto)
         {
             var basket = await _context.Baskets
@@ -88,6 +101,23 @@ namespace API.Controllers
             };
             //se agrega la orden
             _context.Orders.Add(order);
+           // _emailService.SendEmail(request);
+           
+            
+            /*var email = new MimeMessage();
+            email.From.Add(MailboxAddress.Parse("christa.kessler16@ethereal.email"));
+            email.To.Add(MailboxAddress.Parse("christa.kessler16@ethereal.email"));
+            email.Subject= "Order created!!";
+            email.Body = new TextPart(TextFormat.Html) {Text = "Your order was created!"};
+
+            using var smtp = new MailKit.Net.Smtp.SmtpClient();
+            smtp.Connect("smtp.ethereal.email", 587, SecureSocketOptions.StartTls); //smtp.gmail.com
+            smtp.Authenticate("christa.kessler16@ethereal.email", "RC4D37EyGBxEKHKuvd");
+            smtp.Send(email);
+            smtp.Disconnect(true);*/
+
+            
+
             _context.Baskets.Remove(basket);
 
         
