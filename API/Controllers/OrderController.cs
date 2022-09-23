@@ -116,14 +116,14 @@ namespace API.Controllers
             
             var email = new MimeMessage();
             email.From.Add(MailboxAddress.Parse("christa.kessler16@ethereal.email"));
-            email.To.Add(MailboxAddress.Parse("wellington.kuhic23@ethereal.email"));
+            email.To.Add(MailboxAddress.Parse("braxton.schoen43@ethereal.email"));
             email.Subject= "Order created!!";
             
             email.Body = bodyBuilder.ToMessageBody();
 
             using var smtp = new MailKit.Net.Smtp.SmtpClient();
             smtp.Connect("smtp.ethereal.email", 587, SecureSocketOptions.StartTls); //smtp.gmail.com
-            smtp.Authenticate("wellington.kuhic23@ethereal.email", "UeexD2WCNS8FCcduAN");
+            smtp.Authenticate("braxton.schoen43@ethereal.email", "rJCCgMbXpszgaW1FtP");
             smtp.Send(email);
             smtp.Disconnect(true);
             

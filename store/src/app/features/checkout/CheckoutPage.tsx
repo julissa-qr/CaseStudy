@@ -93,7 +93,7 @@ export default function CheckoutPage() {
                             </Typography>
                             <Typography variant="subtitle1">
                                 Your order number is #{orderNumber}. We have emailed your order
-                                confirmation, THANKS FOR YOUR PREFERENCE!
+                                confirmation, thanks for your preference!
                             </Typography>
                         </>
                     ) : (
