@@ -13,7 +13,7 @@ interface Props {
 
 export default function BasketTable({ items, isBasket = true }: Props) {
     
-    const { setBasket, removeItem } = useStoreContext();
+    const {basket, setBasket, removeItem } = useStoreContext();
     const [status, setStatus] = useState({
         loading: false,
         name: ''

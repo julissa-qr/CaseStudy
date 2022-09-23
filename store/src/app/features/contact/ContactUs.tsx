@@ -1,7 +1,5 @@
-import { Button, ButtonGroup, Typography, Grid, Card, CardContent, TextField } from "@mui/material";
 
 import { useAppDispatch, useAppSelector } from "../../store/configureStore";
-import { decrement, increment } from "./counterReducer";
 
 export default function ContactUs() {
     const dispatch = useAppDispatch();
