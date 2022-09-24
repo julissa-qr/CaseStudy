@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/+b+7b3E9aUMUjt7dX0jzsiMgKUrJLlY+BzdQyw3F+FOuEjY6Hl67nypuPRRXi9z8Z/e9mkjwEHkyIV1hotfZA==",
+  "dgSpecHash": "gmClfM+p7n47V87Q+sLN5PBR9z1rj1vMNVQqomRf1sTjc79sS76P5e526ZqPD8P1ydObjKvOERWRD3T036ERJQ==",
   "success": true,
-  "projectFilePath": "C:\\julissa\\JStore\\API\\API.csproj",
+  "projectFilePath": "c:\\julissa\\JStore\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Core i7\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
     "C:\\Users\\Core i7\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
@@ -39,8 +39,11 @@
     "C:\\Users\\Core i7\\.nuget\\packages\\microsoft.identitymodel.protocols\\6.10.0\\microsoft.identitymodel.protocols.6.10.0.nupkg.sha512",
     "C:\\Users\\Core i7\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.10.0\\microsoft.identitymodel.protocols.openidconnect.6.10.0.nupkg.sha512",
     "C:\\Users\\Core i7\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.10.0\\microsoft.identitymodel.tokens.6.10.0.nupkg.sha512",
+    "C:\\Users\\Core i7\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Core i7\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\Core i7\\.nuget\\packages\\mimekit\\3.4.1\\mimekit.3.4.1.nupkg.sha512",
+    "C:\\Users\\Core i7\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
+    "C:\\Users\\Core i7\\.nuget\\packages\\nunit\\3.13.3\\nunit.3.13.3.nupkg.sha512",
     "C:\\Users\\Core i7\\.nuget\\packages\\portable.bouncycastle\\1.9.0\\portable.bouncycastle.1.9.0.nupkg.sha512",
     "C:\\Users\\Core i7\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.0.6\\sqlitepclraw.bundle_e_sqlite3.2.0.6.nupkg.sha512",
     "C:\\Users\\Core i7\\.nuget\\packages\\sqlitepclraw.core\\2.0.6\\sqlitepclraw.core.2.0.6.nupkg.sha512",
