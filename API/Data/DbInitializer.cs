@@ -20,7 +20,10 @@ namespace API.Data
                     UserName = "juli",
                     Email = "juli@hotmail.com"
                 };
-                //usamos await por el metodo async
+                /*usamos await por el metodo async
+                cuando creamos un usuario, no tenemos que usar save changes
+                el metodo async se encarga por nosotros 
+                es el trabajo de userManager*/
                 await userManager.CreateAsync(user, "Pa$$w0rd");
                 await userManager.AddToRoleAsync(user, "Member");
 
@@ -30,7 +33,7 @@ namespace API.Data
                     UserName = "joseadmin",
                     Email = "joseadmin@hotmail.com"
                 };
-
+                //no hay necesidad de guardar manualmente los cambios a la db
                 await userManager.CreateAsync(admin, "Pa$$w0rd");
                 await userManager.AddToRolesAsync(admin, new[] { "Member", "Admin" });
             }

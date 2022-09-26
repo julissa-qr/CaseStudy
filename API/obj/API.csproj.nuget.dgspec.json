@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\julissa\\JStore\\API\\API.csproj": {}
+    "C:\\julissa\\JStore\\API\\API.csproj": {}
   },
   "projects": {
-    "c:\\julissa\\JStore\\API\\API.csproj": {
+    "C:\\julissa\\JStore\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\julissa\\JStore\\API\\API.csproj",
+        "projectUniqueName": "C:\\julissa\\JStore\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "c:\\julissa\\JStore\\API\\API.csproj",
+        "projectPath": "C:\\julissa\\JStore\\API\\API.csproj",
         "packagesPath": "C:\\Users\\Core i7\\.nuget\\packages\\",
-        "outputPath": "c:\\julissa\\JStore\\API\\obj\\",
+        "outputPath": "C:\\julissa\\JStore\\API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -25,6 +25,7 @@
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

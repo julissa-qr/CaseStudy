@@ -71,3 +71,4 @@ C:\julissa\JStore\API\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.Dependenc
 C:\julissa\JStore\API\bin\Debug\net6.0\MailKit.dll
 C:\julissa\JStore\API\bin\Debug\net6.0\MimeKit.dll
 C:\julissa\JStore\API\bin\Debug\net6.0\BouncyCastle.Crypto.dll
+C:\julissa\JStore\API\bin\Debug\net6.0\nunit.framework.dll

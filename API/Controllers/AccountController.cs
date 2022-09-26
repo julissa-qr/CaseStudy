@@ -24,14 +24,14 @@ namespace API.Controllers
         {
             _context = context;
             _tokenService = tokenService;
-            _userManager = userManager;
+            _userManager = userManager; //nos ermite iniciar sesion y registrar usuarios
         }
 
         //LOGIN
         [HttpPost("login")]
-        public async Task<ActionResult<UserDto>> Login(LoginDto loginDto)
+        public async Task<ActionResult<UserDto>> Login(LoginDto loginDto) //tomar parametros de dto
         {
-            //primero checar si tenemos el usuario en db
+            //primero checar si tenemos el usuario en db o sera null porue no existe en la db
             var user = await _userManager.FindByNameAsync(loginDto.Username);
             //ver si la contra coincide dentro de la db
             if (user == null || !await _userManager.CheckPasswordAsync(user, loginDto.Password))
@@ -84,13 +84,15 @@ namespace API.Controllers
             return StatusCode(201);
         }
 
-        [Authorize]
+        [Authorize] //indicar que se tiene que autorizar (token)
         [HttpGet("currentUser")]
         public async Task<ActionResult<UserDto>> GetCurrentUser()
         {
+            //ver si tenemos usuario
             var user = await _userManager.FindByNameAsync(User.Identity.Name);
             var userBasket = await RetrieveBasket(User.Identity.Name);
 
+            // regresa el email, carrito y token
             return new UserDto
             {
                 Email = user.Email,
@@ -100,7 +102,7 @@ namespace API.Controllers
         }
 
         //nos da la direccion del usuario
-        [Authorize]
+        [Authorize] 
         [HttpGet("savedAddress")]
         public async Task<ActionResult<UserAddress>> GetSavedAddress()
         {

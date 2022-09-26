@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Mail;
 using System.Threading.Tasks;
 using API.Data;
 using API.DTOs;
@@ -11,13 +10,9 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MimeKit;
-using MailKit.Net.Smtp;
 using MailKit.Security;
-using MimeKit.Text;
 using API.Services.EmailService;
-using MailKit;
 using System.IO;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace API.Controllers
 {
@@ -104,7 +99,6 @@ namespace API.Controllers
             };
             //se agrega la orden
             _context.Orders.Add(order);
-           // _emailService.SendEmail(request);
            
             var bodyBuilder = new BodyBuilder();
 

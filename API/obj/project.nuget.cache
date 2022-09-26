@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gmClfM+p7n47V87Q+sLN5PBR9z1rj1vMNVQqomRf1sTjc79sS76P5e526ZqPD8P1ydObjKvOERWRD3T036ERJQ==",
+  "dgSpecHash": "THyBRKQl/qi7hPpA+t7WTt1WCpqY7jCGuWqb5WX6ILALQrhIMWRh4tpjP5Tu2+Blnvws+mXD7FjaF+PYYXPcew==",
   "success": true,
-  "projectFilePath": "c:\\julissa\\JStore\\API\\API.csproj",
+  "projectFilePath": "C:\\julissa\\JStore\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Core i7\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
     "C:\\Users\\Core i7\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
