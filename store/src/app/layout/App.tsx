@@ -34,7 +34,7 @@ function App() {
   const { setBasket } = useStoreContext();
   const [loading, setLoading] = useState(true);
 
-  //to go and get the basket when our plaication loads
+  //ir y obtener el carrito cuando la aplicacion inicia
   useEffect(() => {
     const customerId = getCookie('customerId'); //debe coincidir en como hemos llamado la cookie
     dispatch(fetchCurrentUser());
@@ -48,7 +48,7 @@ function App() {
     else{
       setLoading(false);
     }
-  }, [setBasket]) //la funcion basket no va a cambiar despues de "set" el loading, va a ser llamado una vez
+  }, [dispatch,setBasket]) //la funcion basket no va a cambiar despues de "set" el loading, va a ser llamado una vez
 
   const [darkMode, setDarkMode] = useState(false);
   const paletteType = darkMode ? 'dark' : 'light';

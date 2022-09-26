@@ -19,7 +19,6 @@ namespace API.Controllers
         public BasketController(StoreContext context)
         {
             _context = context;
-
         }
 
         [HttpGet(Name = "GetBasket")]
@@ -27,6 +26,7 @@ namespace API.Controllers
         {
             var basket = await RetrieveBasket(GetCustomerId());
 
+            //si no hay productos en el carrito...
             if (basket == null) return NotFound();
             return basket.MapBasketToDto();
         }
@@ -34,18 +34,18 @@ namespace API.Controllers
         [HttpPost]//     api/basket?productId=2quantity=3
         public async Task<ActionResult<BasketDto>> AddItemToBasket(int productId, int quantity)
         {
-            //get basket
+            //obtener carrito
             var basket = await RetrieveBasket(GetCustomerId());
             if (basket == null) basket = CreateBasket();
 
-            //get product related to the item
+            //obtener producto relacionado al item
             var product = await _context.Products.FindAsync(productId);
             if (product == null) return NotFound();
 
-            //add item
+            //agregar item
             basket.AddItem(product, quantity);
 
-            //save changes
+            //guardar cambios
             var result = await _context.SaveChangesAsync() > 0;
 
             if (result) return CreatedAtRoute("GetBasket", basket.MapBasketToDto());
@@ -61,10 +61,10 @@ namespace API.Controllers
             var basket = await RetrieveBasket(GetCustomerId());
             if (basket == null) return NotFound();
 
-            // remove item or reduce quantity
+            // remover item o cambiar cantidad
             basket.RemoveItem(productId, quantity);
 
-            // save changes
+            // guardar cambios
             var result = await _context.SaveChangesAsync() > 0;
             if (result) return Ok();
 
@@ -102,6 +102,7 @@ namespace API.Controllers
                 var cookieOptions = new CookieOptions { IsEssential = true, Expires = DateTime.Now.AddDays(30) };
                 Response.Cookies.Append("customerId", customerId, cookieOptions);
             }
+            //crea el carrito y se le asigna el customer id
             var basket = new Basket { CostumerId = customerId };
             _context.Baskets.Add(basket);
             return basket;

@@ -28,11 +28,6 @@ namespace API.Controllers
 
         private readonly IEmailService _emailService;
 
-       /*public OrderController(IEmailService emailService)
-        {
-            _emailService = emailService;
-            
-        }*/
 
         [HttpGet]
         public async Task<ActionResult<List<OrderDto>>> GetOrders()
@@ -110,14 +105,14 @@ namespace API.Controllers
             
             var email = new MimeMessage();
             email.From.Add(MailboxAddress.Parse("christa.kessler16@ethereal.email"));
-            email.To.Add(MailboxAddress.Parse("stephanie.williamson@ethereal.email"));
+            email.To.Add(MailboxAddress.Parse("chadrick61@ethereal.email"));
             email.Subject= "Order created!!";
             
             email.Body = bodyBuilder.ToMessageBody();
 
             using var smtp = new MailKit.Net.Smtp.SmtpClient();
             smtp.Connect("smtp.ethereal.email", 587, SecureSocketOptions.StartTls); //smtp.gmail.com
-            smtp.Authenticate("stephanie.williamson@ethereal.email", "1wST6dCSBQAFKvhycm");
+            smtp.Authenticate("chadrick61@ethereal.email", "YtaCzPe3sg16dSWUuJ");
             smtp.Send(email);
             smtp.Disconnect(true);
             
